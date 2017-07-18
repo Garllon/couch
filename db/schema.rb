@@ -17,7 +17,12 @@ ActiveRecord::Schema.define(version: 20170717205629) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
-    t.string "location"
+    t.string "street"
+    t.string "postal_code"
+    t.string "city"
+    t.string "country_code"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
