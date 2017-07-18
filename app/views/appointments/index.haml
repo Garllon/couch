@@ -1,0 +1,16 @@
+- @appointments.each do |appointment|
+  .panel.panel-primary
+    .panel-heading
+      Appointment
+    .panel-body
+      .col-md-6
+        .row
+          = appointment.street
+        .row
+          = appointment.postal_code
+          = appointment.city
+        .row
+          = appointment.country_code
+      .col-md-6
+        = appointment.latitude
+        = appointment.longitude
