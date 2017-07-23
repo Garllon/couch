@@ -11,7 +11,6 @@ gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'haml'
@@ -19,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rubocop', require: false
 gem 'turbolinks', '~> 5'
 gem 'geocoder'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

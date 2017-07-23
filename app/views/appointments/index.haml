@@ -2,7 +2,11 @@
   .panel.panel-primary
     .panel-heading.clearfix
       %h4{class: "panel-title pull-left", style: "padding-top: 7.5px;"}
-        = "Appointment am #{appointment.date}"
+        - if appointment.date.nil?
+          Appointment
+        - else
+          Appointment am
+          = l(appointment.date, format: :date_with_time)
       .btn-group.pull-right
         = link_to 'Show', appointment_path(appointment), {class: 'btn btn-default btn-sm'}
         = link_to 'Edit', edit_appointment_path(appointment), {class: 'btn btn-default btn-sm'}

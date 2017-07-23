@@ -34,6 +34,6 @@ class AppointmentsController < ApplicationController
 
   def appointment_parameters
     params.require(:appointment)
-      .permit(:street, :postal_code, :city, :country_code)
+      .permit(:street, :postal_code, :city, :country_code, :date)
   end
 end

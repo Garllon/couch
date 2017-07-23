@@ -1,4 +1,9 @@
 module AppointmentsHelper
+  COUNTRY_OPTIONS = [
+    ['DE', 'Germany'],
+    ['GB', 'Greate Britain']
+  ]
+
   def static_gmaps_image_url_for(appointment, imgWidth, imgHeight)
     'http://maps.googleapis.com/maps/api/staticmap' \
       "?size=#{imgWidth}x#{imgHeight}" \
