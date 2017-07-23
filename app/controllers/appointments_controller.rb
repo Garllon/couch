@@ -5,6 +5,10 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.all
   end
 
+  def show
+    @appointment = Appointment.find(params[:id])
+  end
+
   def new
     @appointment = Appointment.new
   end
@@ -12,6 +16,17 @@ class AppointmentsController < ApplicationController
   def create
     Appointment.create(appointment_parameters)
 
+    redirect_to appointments_path
+  end
+
+  def edit
+    @appointment = Appointment.find(params[:id])
+  end
+
+  def update
+    appointment = Appointment.find(params[:id])
+    appointment.update_attributes(appointment_parameters)
+    
     redirect_to appointments_path
   end
 

@@ -16,3 +16,4 @@ module Couch
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+GOOGLE_MAPS_KEY = 'AIzaSyADyuffPOOO23d_imOWpJSl0OVe0BO0sI8'

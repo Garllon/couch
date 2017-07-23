@@ -18,6 +18,7 @@ gem 'haml'
 gem 'jbuilder', '~> 2.5'
 gem 'rubocop', require: false
 gem 'turbolinks', '~> 5'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

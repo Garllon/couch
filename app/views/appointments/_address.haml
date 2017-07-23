@@ -1,0 +1,22 @@
+= form_for appointment, html: { class: 'form-horizontal' } do |f|
+  .panel-body
+    .form-group
+      = f.label :street, class: 'col-md-4 control-label'
+      .col-md-6
+        = f.text_field :street, class: 'form-control'
+    .form-group
+      = f.label :postal_code, class: 'col-md-4 control-label'
+      .col-md-6
+        = f.text_field :postal_code, class: 'form-control'
+    .form-group
+      = f.label :city, class: 'col-md-4 control-label'
+      .col-md-6
+        = f.text_field :city, class: 'form-control'
+    .form-group
+      = f.label :country_code, class: 'col-md-4 control-label'
+      .col-md-6
+        = f.select :country_code, options_for_select(%w(Deutschland Schweiz), %w(DE CH)),
+          { prompt: 'Select Country' },
+          { class: 'form-control' }
+  .panel-footer
+    = f.button 'Save', id: 'save_appointment', class: 'btn btn-primary'

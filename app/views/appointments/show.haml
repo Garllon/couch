@@ -1,0 +1,16 @@
+.panel.panel-primary
+  .panel-heading.clearfix
+    %h4{class: "panel-title pull-left", style: "padding-top: 7.5px;"}
+      Appointment
+  .panel-body
+    .col-md-6
+      .row
+        = @appointment.street
+      .row
+        = @appointment.postal_code
+        = @appointment.city
+      .row
+        = @appointment.country_code
+    .col-md-6
+      %a.th{href: static_gmaps_image_url_for(@appointment, 250, 250)}
+        = image_tag static_gmaps_image_url_for(@appointment, 250, 250)

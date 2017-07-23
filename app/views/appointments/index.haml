@@ -1,7 +1,11 @@
 - @appointments.each do |appointment|
   .panel.panel-primary
-    .panel-heading
-      Appointment
+    .panel-heading.clearfix
+      %h4{class: "panel-title pull-left", style: "padding-top: 7.5px;"}
+        = "Appointment am #{appointment.date}"
+      .btn-group.pull-right
+        = link_to 'Show', appointment_path(appointment), {class: 'btn btn-default btn-sm'}
+        = link_to 'Edit', edit_appointment_path(appointment), {class: 'btn btn-default btn-sm'}
     .panel-body
       .col-md-6
         .row
@@ -11,6 +15,3 @@
           = appointment.city
         .row
           = appointment.country_code
-      .col-md-6
-        = appointment.latitude
-        = appointment.longitude
