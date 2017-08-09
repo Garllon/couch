@@ -1,5 +1,6 @@
 = bootstrap_form_for(appointment, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f|
   .panel-body
+    = f.text_field :subject
     = f.text_field :street
     = f.text_field :postal_code
     = f.text_field :city
