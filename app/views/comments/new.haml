@@ -1,0 +1,8 @@
+.panel.panel-primary
+  .panel-heading
+    Kommentar erstellen
+  = bootstrap_form_for([@appointment, @comment], layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f|
+    .panel-body
+      = f.text_area :text
+    .panel-footer
+      = f.submit 'Save', class: 'btn btn-default'
