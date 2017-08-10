@@ -12,3 +12,15 @@
       %ul.nav.navbar-nav
         %li{class: params[:controller] == 'appointments' ? 'active' : ''}
           = link_to 'Termine', appointments_path
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li
+            %a
+              = current_user.email
+          %li
+            = link_to 'LOGOUT', destroy_user_session_path, method: :delete
+        - else
+          %li
+            = link_to 'SIGN IN', new_user_session_path
+          %li
+            = link_to 'Registration', new_user_registration_path
